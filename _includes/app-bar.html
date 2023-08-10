@@ -1,0 +1,14 @@
+<header class="mb-auto">
+  <div>
+    <h3 class="float-md-start mb-0">{{%site.title%}}</h3>
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+      <a class="nav-link fw-bold py-1 px-0 {% if page.layout == 'home' %}{{ " active" }}{% endif %}" {% if
+        tab.url==page.url %} {{ " aria-current='page'" }} {% endif %} href="/">Home</a>
+
+      {% for tab in site.tabs%}
+        <a class="nav-link fw-bold py-1 px-0 {% if tab.url == page.url %}{{ 'active' }}{% endif %}" {% if
+          tab.url==page.url %} {{ " aria-current='page'" }} {% endif %} href="{{ tab.url}}">{{tab.title}}</a>
+      {%endfor%}
+    </nav>
+  </div>
+</header>

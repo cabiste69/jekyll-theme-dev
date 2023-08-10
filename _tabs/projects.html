@@ -1,0 +1,12 @@
+---
+layout: page
+title: Projects
+permalink: /:title
+order: 1
+---
+
+<h2>my projects: </h2>
+
+{% for project in site.projects %}
+    - <a href="{{project.url}}"> {{project.title}}</a> <br>
+{% endfor %}

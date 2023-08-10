@@ -2,8 +2,9 @@
 layout: post
 title: title
 summary: Summary of the article
-categories: jekyll update
-tags: c# avalonia
+categories: web
+tags: C# Blazor
 date:   2023-08-08 11:08:23 +0100
-image: idk
+image: img
+permalink: /guide/:title
 ---
