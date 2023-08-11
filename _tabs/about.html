@@ -1,0 +1,49 @@
+---
+layout: page
+title: About
+permalink: /:title
+order: 3
+---
+
+<div class="text-center">
+    <h1 class="display-3">
+        {{site.about_header}}
+    </h1>
+
+    <p class="lead">
+        {{site.about_description}}
+    </p>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-evenly flex-wrap">
+
+        <a class="btn btn-secondary" target="_blank" href="https://github.com/{{site.github_username}}">
+            <i class="bi bi-github" style="font-size: 16px;"></i>
+            {{site.github_username}}
+        </a>
+
+        <!-- <a class="btn btn-secondary" target="_blank" href="https://twitter.com/{{site.github_username}}">
+            <i class="bi bi-twitter" style="font-size: 16px;"></i>
+            {{site.twitter_username}}
+        </a> -->
+
+        <a class="btn btn-secondary" target="_blank" href="mailto:{{site.email}}">
+            <i class="bi bi-envelope-at-fill" style="font-size: 16px;"></i>
+            {{site.email}}
+        </a>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-file-text-fill"></i>
+                Resume
+            </button>
+            <ul class="dropdown-menu">
+                {% assign resumes = site.static_files | where: "resume", true %}
+                {% for resume in resumes%}
+                    <li><a class="dropdown-item" href="{{resume.path}}" target="_blank">{{resume.extname}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
