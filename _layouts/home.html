@@ -3,9 +3,9 @@ layout: page
 refactor: true
 ---
 
-<div class="text-center ">
+<div class="text-center">
     <h1 class="display-3"> {{site.quote}} </h1>
-    <p class="lead"> {{site.description}} </p>
+    <p class="lead"> {{site.home_description}} </p>
     <div class="d-flex justify-content-evenly">
         {% for tab in site.tabs %}
         <a href="{{tab.url}}" class="btn btn-lg btn-light fw-bold border-white bg-white">{{tab.title}}</a> <br>
