@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="en" class="vignette" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -21,18 +21,18 @@ layout: compress
     <link rel="stylesheet" href="/assets/css/default.css">
 </head>
 
-<body class="d-flex h-100 text-bg-dark">
+<body class="d-flex text-bg-dark">
+    <div class="w-100 ">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
+        <header class="mb-auto cover-container d-flex mx-auto flex-column p-3">
             {% include app-bar.html %}
         </header>
 
-        <main class="px-3">
+        <main class="px-3 py-5 container">
             {{ content }}
         </main>
 
-        <footer class="mt-auto text-white-50">
+        <footer class="mt-auto mx-5 text-white-50 fixed-bottom">
             {% include footer.html %}
         </footer>
     </div>

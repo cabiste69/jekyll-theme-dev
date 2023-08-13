@@ -5,8 +5,22 @@ permalink: /:title
 order: 1
 ---
 
-<h2>my projects: </h2>
+<div class="my-5 container-fluid">
 
-{% for project in site.projects %}
-    - <a href="{{project.url}}"> {{project.title}}</a> <br>
-{% endfor %}
+    <div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+        {% for project in site.projects %}
+        <div class="card text-bg-dark m-3 border-light" style="width: 18rem; ">
+            <img src="{{project.image}}" class="card-img-top mt-2" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="blockquote-footer my-2">{{project.summary}}</p>
+                <div style="position: relative;">
+
+                    <a href="{{project.url}}" class="btn btn-primary">check out</a>
+                    <!-- <a href="{{project.sourceCode}}" class="btn btn-primary">code</a> -->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

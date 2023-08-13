@@ -1,0 +1,11 @@
+---
+layout: post
+title: title
+summary: description of the project
+categories: web
+tags: C# Blazor
+author: ken
+permalink: /project/:title
+codelink: github.com/:author/:title
+image: /assets/images/projects/title/cover.png
+---
